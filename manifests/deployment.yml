@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bprashantmslearndotnetcloudnativedevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bprashantmslearndotnetcloudnativedevops
+  template:
+    metadata:
+      labels:
+        app: bprashantmslearndotnetcloudnativedevops 
+    spec:
+      containers:
+        - name: bprashantmslearndotnetcloudnativedevops 
+          image: acseshop1193910329.azurecr.io/bprashantmslearndotnetcloudnativedevops
+          ports:
+          - containerPort: 80
